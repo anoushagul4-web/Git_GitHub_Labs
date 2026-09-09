@@ -1,4 +1,4 @@
-ENVIRONMENT = "development"
+ENVIRONMENT = "staging"
 APP_NAME = "cloud-api"
 PORT = 8080
 
