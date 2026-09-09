@@ -7,8 +7,12 @@ print("=== Server Inventory ===")
 print(f"Hostname: {platform.node()}")
 print(f"OS: {platform.system()} {platform.release()}")
 
-# Developer A:
-# Add a disk usage section using shutil.disk_usage().
+# Disk Usage
+total, used, free = shutil.disk_usage("/")
+
+print(f"Disk Total: {total // (1024**3)} GB")
+print(f"Disk Used: {used // (1024**3)} GB")
+print(f"Disk Free: {free // (1024**3)} GB")
 
 # Developer B:
 # Add a memory section.
