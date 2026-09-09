@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "Running server inventory..."
-python3 inventory.py
-echo "Inventory completed successfully."
+export APP_ENV="${APP_ENV:-dev}"
+export APP_NAME="${APP_NAME:-cloud-app}"
+
+python3 system_check.py

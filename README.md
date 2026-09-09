@@ -1,22 +1,19 @@
-# Lab 4: Secure Python/Bash Repository
+# Lab 5: CI-Ready Python Automation with Pull Request
 
 ## Goal
-Practice repository hygiene and secret-leak prevention.
+Practice GitHub Pull Requests and prepare Python/Bash automation for CI.
 
 ## Your task
-1. Inspect all supplied files.
-2. Identify files that should not be committed.
-3. Create a `.gitignore` covering:
-   - `.env`
-   - log files
-   - Python cache
-   - virtual environments
-   - generated reports
-4. Verify ignored files with `git status`.
-5. Improve `report.py` so it reads configuration from environment variables rather than hard-coded credentials.
-6. Use `generate_report.sh` to run the Python report.
-7. Commit only safe source/configuration files.
-8. Push to GitHub.
-9. Explain in this README why each ignored pattern exists.
+1. Create branch `feature-system-check`.
+2. Improve `system_check.py` so it validates that the required environment variables exist.
+3. Keep the script safe: never print secret values.
+4. Test the script locally.
+5. Commit and push the branch.
+6. Create a Pull Request into `main`.
+7. Add a GitHub Actions workflow under `.github/workflows/ci.yml`.
+8. The workflow should install/use Python and run `python3 system_check.py`.
+9. Observe the check on the Pull Request.
+10. Merge only after the check passes.
 
-Do not publish real credentials. The supplied values are placeholders only.
+## Deliverable
+A merged Pull Request with a passing GitHub Actions check.
