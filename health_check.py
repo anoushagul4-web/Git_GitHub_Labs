@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import os
 import sys
 
@@ -17,4 +18,4 @@ if state == "up":
     print("HEALTHY")
 else:
     print("UNHEALTHY")
-    # TODO: return a non-zero exit status
+    sys.exit(1)

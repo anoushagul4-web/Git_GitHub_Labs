@@ -6,5 +6,9 @@ echo "Running health check for $SERVICE_NAME"
 
 python3 health_check.py
 
-# TODO: detect Python failure using the exit status ($?)
-# and print either SUCCESS or ALERT.
+if [ $? -eq 0 ]; then
+    echo "SUCCESS: $SERVICE_NAME is healthy."
+else
+    echo "ALERT: $SERVICE_NAME is unhealthy!"
+    exit 1
+fi
