@@ -11,7 +11,7 @@ print("=== System Check ===")
 print(f"Required variables checked: {len(required)}")
 
 if missing:
-    print("Missing required configuration:", ", ".join(missing))
+    print("Missing required configuration: " + ", ".join(missing))
     sys.exit(1)
 
 print("Configuration OK")
